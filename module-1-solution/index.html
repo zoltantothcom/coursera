@@ -26,10 +26,10 @@
              <button class="btn btn-info"
                      ng-click="checkQuantity()">Check If Too Much</button>
          </div>
-         <div class="form-group message alert alert-{{ className }}">
+         <div class="form-group message alert alert-{{ className }}" ng-cloak>
            {{ message }}
          </div>
-         <ul>
+         <ul ng-cloak>
            <li ng-repeat="item in list track by $index">{{ item }}</li>
          </ul>
    </div>
