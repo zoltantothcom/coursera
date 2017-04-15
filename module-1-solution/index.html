@@ -13,7 +13,7 @@
      <h1>Lunch Checker App</h1>
 
          <div class="form-group">
-             <input id="lunch-menu" 
+             <input id="lunch-menu"
                     type="text"
                     placeholder="list comma separated dishes you usually have for lunch"
                     class="form-control" 
@@ -30,7 +30,8 @@
            {{ message }}
          </div>
          <ul>
-           <li ng-repeat="item in list track by $index">{{ item }}</li>
+           <li ng-repeat="item in list track by $index"
+               ng-class="($index > 2) ? 'text-danger' : ''">{{ item }}</li>
          </ul>
    </div>
 
