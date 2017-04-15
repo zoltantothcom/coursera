@@ -20,12 +20,15 @@
                     ng-model="items">
          </div>
          <div class="form-group">
-             <button class="btn btn-default"
+             <button class="btn btn-info"
                      ng-click="check()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message alert alert-{{ className }}">
            {{ message }}
          </div>
+         <ul>
+           <li ng-repeat="item in list track by $index">{{ item }}</li>
+         </ul>
    </div>
 
    <script src="scripts/angular.min.js"></script>
