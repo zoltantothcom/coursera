@@ -35,8 +35,7 @@
 			{ name: 'peaches', quantity: 14 },
 			{ name: 'oranges', quantity: 16 },
 			{ name: 'kiwis',   quantity: 18 },
-			{ name: 'bananas', quantity: 20 },
-			{ name: 'papayas', quantity: 22 }
+			{ name: 'bananas', quantity: 20 }
 		];
 
 		// to buy array

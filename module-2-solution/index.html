@@ -46,7 +46,7 @@
         <!-- Already Bought List -->
         <div class="col-md-6" ng-controller="ShoppingListCheckOffBoughtController as AlreadyBoughtController">
           <h2>Already Bought:</h2>
-          <ul ng-show="true">
+          <ul>
             <li ng-repeat="item in AlreadyBoughtController.items track by $index">
               Bought {{ item.quantity }} {{ item.name }} 
             </li>
