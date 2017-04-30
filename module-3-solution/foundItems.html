@@ -1,0 +1,22 @@
+<div class="bg-warning callout" ng-transclude ng-if="list.isEmpty();"></div>
+
+<table class="table table-striped" ng-if="list.isNotEmpty();">
+	<thead> 
+		<tr> 
+			<th>Name</th> 
+			<th>Short&nbsp;Name</th> 
+			<th>Description</th> 
+			<th>Action</th> 
+		</tr> 
+	</thead>
+	<tbody> 
+		<tr ng-repeat="item in list.found"> 
+			<td>{{ item.name }}</td> 
+			<td><i>{{ item.short_name }}</i></td> 
+			<td>{{ item.description }}</td> 
+			<td class="btn_cell">
+				<button ng-click="list.onRemove({ index: $index });">Don't want this one!</button>
+			</td> 
+		</tr>
+	</tbody>
+</table>
