@@ -20,3 +20,18 @@ button:hover {
 	font-size: 12px;
 	padding: 1em 0;
 }
+
+.light {
+	color: #aaa;
+	display: inline-block;;
+	width: 50px;
+}
+
+li {
+	padding: .25em;
+}
+
+.bordered li {
+	border-bottom: 1px solid #ccc;
+	padding: .5em;
+}

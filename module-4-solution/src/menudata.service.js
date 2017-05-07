@@ -1,9 +1,10 @@
 (function () {
+    'use strict';
 
     angular.module('data')
         .service('MenuDataService', MenuDataService)
         .constant('ApiCategories', 'https://davids-restaurant.herokuapp.com/categories.json')
-        .constant('ApiCategoryItems', 'https://davids-restaurant.herokuapp.com/menu_items.json?category=');
+        .constant('ApiCategoryItems', 'https://davids-restaurant.herokuapp.com/menu_items.json');
 
     MenuDataService.$inject = ['$http', 'ApiCategories', 'ApiCategoryItems'];
     function MenuDataService($http, ApiCategories, ApiCategoryItems) {
@@ -16,8 +17,12 @@
     	};
 
     	service.getItemsForCategory = function(categoryShortName) {
-            return $http({ url: ApiCategoryItems + categoryShortName }).then(function(result) {
-                console.log(result.data)
+            return $http({ 
+                url: ApiCategoryItems,
+                params: { 
+                    category: categoryShortName
+                }
+            }).then(function(result) {
                 return result.data;
             });
     	};

@@ -1,4 +1,6 @@
 (function() {
+	'use strict';
+	
 	angular.module('MenuApp')
 		.config(RoutesConfig);
 
@@ -9,12 +11,12 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: 'templates/home.tpl.html'
+				templateUrl: 'src/templates/home.tpl.html'
 			})
 
 			.state('categories', {
 				url: '/categories',
-				templateUrl: 'templates/categories.tpl.html',
+				templateUrl: 'src/templates/categories.tpl.html',
 				controller: 'categoryListController as list',
 				resolve: {
 					categories: ['MenuDataService', function(MenuDataService) {
@@ -25,7 +27,7 @@
 
 			.state('items', {
 				url: '/items/{id}',
-				templateUrl: 'templates/items.tpl.html',
+				templateUrl: 'src/templates/items.tpl.html',
 				controller: 'itemListController as list',
 				resolve: {
 					itemlist: ['$stateParams', 'MenuDataService', 

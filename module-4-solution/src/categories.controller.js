@@ -1,8 +1,8 @@
 (function() {
+	'use strict';
 
 	angular.module('MenuApp')
 		.controller('categoryListController', categoryListController);
-
 
 	categoryListController.$inject = ['categories'];
 	function categoryListController(categories) {

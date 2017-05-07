@@ -1,0 +1,9 @@
+<p class="breadcrumb">
+	<a ui-sref="home">Home</a> &gt; 
+	<a ui-sref="categories">Categories</a> &gt;
+	{{ list.items.category.name }}
+</p>
+
+<h3>Items in category &laquo;{{ list.items.category.name }}&raquo;</h3>
+
+<items-list items="list.items"></items-list>
