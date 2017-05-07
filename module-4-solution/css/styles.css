@@ -1,0 +1,22 @@
+html, body {
+	font-family: sans-serif;
+}
+
+button {
+	background: honeydew;
+	border: 1px solid chartreuse;
+	border-radius: .25em;
+	cursor: pointer;
+	padding: .5em 1.5em;
+}
+
+button:hover {
+	background: chartreuse;
+}
+
+.breadcrumb {
+	border-bottom: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+	font-size: 12px;
+	padding: 1em 0;
+}

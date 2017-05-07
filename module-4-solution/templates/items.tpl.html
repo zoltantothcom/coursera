@@ -1,0 +1,13 @@
+<p class="breadcrumb">
+	<a href="#/" ui-sref="home">Home</a> &gt; 
+	<a href="#/categories" ui-sref="categories">Categories</a> &gt;
+	{{ list.items.category.name }}
+</p>
+
+<h3>Items in category &laquo;{{ list.items.category.name }}&raquo;</h3>
+
+<ul>
+	<li ng-repeat="item in list.items.menu_items">
+		{{ item.name }}
+	</li>
+</ul>
