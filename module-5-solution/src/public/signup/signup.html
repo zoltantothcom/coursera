@@ -95,6 +95,9 @@
 					<span ng-if="regForm.dish.$error.required && regForm.dish.$touched">
 						Please enter your favorite dish number.
 					</span>
+					<div ng-if="signUpCtrl.noDish" class="alert alert-danger" style="color: #c00; padding: .5em; margin-top: .5em;">
+						No such menu number exists.
+					</div>
 				</div>
 			</div>
 
@@ -107,10 +110,6 @@
 				</div>
 			</div>
 		</form>
-
-		<div ng-if="signUpCtrl.noDish" class="alert alert-danger" style="color: #000; padding: .5em;">
-			No such menu number exists.
-		</div>
 
 		<div ng-if="signUpCtrl.submitted" class="alert alert-success" style="color: #000; padding: .5em;">
 			Your information has been saved.
