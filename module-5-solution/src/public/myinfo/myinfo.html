@@ -1,0 +1,66 @@
+<div class="container">
+	<h1>My Info</h1>
+
+	<div ng-if="!myInfoCtrl.info" class="alert alert-warning" style="color: #000; padding: .5em">
+		Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+	</div>
+
+	<div ng-if="myInfoCtrl.info">
+		<div class="panel panel-info"> 
+			<div class="panel-heading"> 
+				<h3 class="panel-title">User info</h3> 
+			</div> 
+			<div class="panel-body" style="color: #000"> 
+				<table class="table table-striped">
+					<tr>
+						<td>
+							<label class="col-sm-2 control-label">First&nbsp;name</label>
+						</td>
+						<td>
+							{{ myInfoCtrl.info.firstname }}
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="col-sm-2 control-label">Last&nbsp;name</label>
+						</td>
+						<td>
+							{{ myInfoCtrl.info.lastname }}
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label class="col-sm-2 control-label">Email</label>
+						</td>
+						<td>
+							{{ myInfoCtrl.info.email }}
+						</td>
+					</tr>
+
+					<tr ng-if="myInfoCtrl.info.phone">
+						<td>
+							<label class="col-sm-2 control-label">Phone</label>
+						</td>
+						<td>
+							{{ myInfoCtrl.info.phone }}
+						</td>
+					</tr>
+				</table>
+			</div> 
+		</div>	
+
+		<div class="panel panel-info"> 
+			<div class="panel-heading"> 
+				<h3 class="panel-title">Favorite dish</h3> 
+			</div> 
+			<div class="panel-body" style="color: #000"> 
+				<h3 style="margin-top: 0">{{ myInfoCtrl.info.name }}</h3>
+				<p ng-if="!myInfoCtrl.info.description">No description available.</p>
+				<p ng-if="myInfoCtrl.info.description">{{ myInfoCtrl.info.description }}</p>
+				<img ng-src="{{ myInfoCtrl.info.img }}" alt="{{ myInfoCtrl.info.name }}">
+			</div> 
+		</div>
+	</div>
+</div>

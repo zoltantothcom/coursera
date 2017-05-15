@@ -15,7 +15,6 @@ function MenuService($http, ApiPath) {
     });
   };
 
-
   service.getMenuItems = function (category) {
     var config = {};
     if (category) {
@@ -27,8 +26,10 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.getFavoriteDish = function(name) {
+    return $http.get(ApiPath + '/menu_items/' + name.toUpperCase() + '.json');
+  };
+
 }
-
-
 
 })();
